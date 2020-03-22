@@ -1,0 +1,131 @@
+/*************** GENERAL_CONFIG ***************/
+
+html {
+	font-size: 62.5%;
+	background-color: var(--light-grey);
+}
+* {
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0;		
+	font-family: arial;
+}
+li {
+	list-style-type: none;
+}
+:root {
+	--dark-grey: #424242;
+	--deep-grey: #757575;
+	--medium-grey: #9E9E9E;
+	--calm-grey: #BDBDBD;
+	--light-grey: #EEE;
+	--orange: #F57C00;
+}
+
+/*************** MAIN_FRAME_LAYOUTS ***************/
+/*_______________ Navigation_Style _______________*/
+
+.mainFrame {
+	margin: auto;
+	width: 100%;
+	background-color: #FFF;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	box-shadow: 0.5rem 0.5rem 1.5rem var(--medium-grey);
+	padding-bottom: 3rem;
+}
+.mainFrame__navBloc {
+	display: flex;
+	background-color: var(--dark-grey);
+	text-transform: capitalize;
+	font-variant: small-caps;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border: 0.1rem solid var(--dark-grey);
+	height: 4.7rem; 
+	padding-left: 3rem;
+	align-items: center;
+}
+.mainFrame__navBloc a {	
+	font-size: 1.8rem;
+	color: var(--light-grey);
+	text-decoration: none;
+	padding-right: 3rem;
+}
+.mainFrame__navBloc a:hover {
+	color: #FFF;
+}
+
+/*_______________ Tree_Bar_Style _______________*/
+
+.mainFrame__treeBloc {
+	display: flex;
+	border: 0.1rem solid var(--calm-grey);
+	width: 98%;
+	height: 3rem;
+	align-items: center;
+	margin: 1rem auto;
+	border-radius: 0.3rem;
+	padding-left: 0.5rem;
+	position: relative;
+}
+.mainFrame__treeBloc img {
+	height: 2.5rem;
+	width: auto;
+	margin: 0.5rem;
+}
+.mainFrame__treeBloc img:last-child {
+	position: absolute;
+	right: 0.5rem;
+	top: -0.3rem;
+}
+.mainFrame__treeBloc p {
+	color: var(--orange);
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+/*************** ARTICLE_FRAME_LAYOUTS ***************/
+
+article[class*=__frame] {
+	padding: 0.7rem 0.8rem 1.3rem;
+	border: 0.1rem solid var(--calm-grey);
+	border-radius: 0.5rem;
+}
+
+div[class*="frame_title"] {
+	display: flex;
+	align-items: center;
+	height: 3.5rem;
+	color: var(--dark-grey);
+	text-transform: uppercase;
+	background-color: var(--light-grey);
+	border: 0.1rem solid var(--calm-grey);
+}
+div[class*="frame_title"] img {
+	width: 2.4rem;
+	height: auto;
+	margin: auto 1.3rem auto 0.8rem;
+}
+
+/*************** OTHERS ***************/
+
+form input {
+	margin: 1rem auto;
+	height: 3.2rem;
+}
+form input[type='submit'] {
+	background-color: var(--orange);
+	height: 4rem;
+	width: 12rem;
+    font-size: 1.6rem;
+	color: #FFF;
+	border: none;
+	border-radius: 0.5rem;
+}
+footer p {
+	margin: 0.3rem auto 1rem 0.5rem;
+	font-family: arial;
+	font-size: 1.2rem;
+	color: var(--dark-grey);
+}

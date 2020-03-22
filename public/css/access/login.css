@@ -1,0 +1,38 @@
+@import '../default.css';
+
+.container {
+	width: 98%;
+	max-width: 95rem;	
+	margin: auto;
+}
+header img {
+	width: 70rem;
+	position: relative;
+	left: -3rem;
+}
+.form__frame {
+	width: 85%;	
+	margin: 3rem auto 0;	
+}
+.form__frame_content {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	margin: 2rem auto 3rem;
+}
+.form__frame_content p {
+	text-align: justify;
+	margin-bottom: 2rem;
+    color: #000;
+}
+.form__frame_content form {
+	display: flex;
+	flex-direction: column;
+}
+.form__frame_content input {
+	width: 60%;	
+}
+.form__frame_content input[type='submit'] {
+	position: relative;
+	top: 0.7rem;
+}
