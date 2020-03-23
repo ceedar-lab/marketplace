@@ -1,5 +1,8 @@
-/*************** GENERAL_CONFIG ***************/
-
+/**
+ * CE CSS CONTIENT LA MISE EN PAGE DES ELEMENTS COMMUNS A TOUTES LES PAGES DU SITE
+ *
+ * GENERAL_CONFIG : Paramètres généraux
+ */
 html {
 	font-size: 62.5%;
 	background-color: var(--light-grey);
@@ -22,9 +25,9 @@ li {
 	--orange: #F57C00;
 }
 
-/*************** MAIN_FRAME_LAYOUTS ***************/
-/*_______________ Navigation_Style _______________*/
-
+/**
+ * MAIN_FRAME_LAYOUTS - Mise en page de la section principale
+ */
 .mainFrame {
 	margin: auto;
 	width: 100%;
@@ -34,6 +37,10 @@ li {
 	box-shadow: 0.5rem 0.5rem 1.5rem var(--medium-grey);
 	padding-bottom: 3rem;
 }
+
+/**
+ * MAIN_FRAME_LAYOUTS - Nav_Bloc_Style : Mise en page de la barre de navigation
+ */
 .mainFrame__navBloc {
 	display: flex;
 	background-color: var(--dark-grey);
@@ -55,9 +62,9 @@ li {
 .mainFrame__navBloc a:hover {
 	color: #FFF;
 }
-
-/*_______________ Tree_Bar_Style _______________*/
-
+/**
+ * MAIN_FRAME_LAYOUTS - Tree_Bar_Style : Mise en page de l'arborescence
+ */
 .mainFrame__treeBloc {
 	display: flex;
 	border: 0.1rem solid var(--calm-grey);
@@ -85,8 +92,9 @@ li {
 	font-weight: bold;
 }
 
-/*************** ARTICLE_FRAME_LAYOUTS ***************/
-
+/**
+ * ARTICLE_LAYOUT : Mise en page globale des différents blocs d'articles du site
+ */
 article[class*=__frame] {
 	padding: 0.7rem 0.8rem 1.3rem;
 	border: 0.1rem solid var(--calm-grey);
@@ -108,8 +116,9 @@ div[class*="frame_title"] img {
 	margin: auto 1.3rem auto 0.8rem;
 }
 
-/*************** OTHERS ***************/
-
+/**
+ * OTHERS : Config des "briques" du site 
+ */
 form input {
 	margin: 1rem auto;
 	height: 3.2rem;

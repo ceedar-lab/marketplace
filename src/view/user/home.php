@@ -1,4 +1,4 @@
-<?php $css = 'user/main.css'; ?>
+<?php $css = 'user/default.css'; ?>
 
 <div class="mainFrame__treeBloc">
 	<img src="images/icon_home.png" alt="login icon">
