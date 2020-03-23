@@ -10,7 +10,7 @@ Créer une marketplace orientée dark web
 
 ## Extensions
 
-x Accès à une messagerie pour communiquer avec les autres utilisateurs
-x Création d'un forum
-x Sauvegarde automatique des bases de données
-x Mise en place d'un système de paiement
+- Accès à une messagerie pour communiquer avec les autres utilisateurs
+- Création d'un forum
+- Sauvegarde automatique des bases de données
+- Mise en place d'un système de paiement
