@@ -16,23 +16,16 @@
             <div class="header__profil">
                 <img src="images/icon_profil.png" alt="photo de l'utilisateur">
                 <ul>
-                    <li>Connecté en tant que </li>
+                    <li>Connecté en tant que <strong>UserName</strong></li>
                     <li>Balance</li>
                     <li>Déconnexion</li>
                 </ul>
             </div>
         </header>
         <ul class="exchangeRates">
-            <?php 
-            $euro = new App\HTML\Currency('EUR');
-            $euro->showExchangeRate();
-            $euro = new App\HTML\Currency('USD');
-            $euro->showExchangeRate();
-            $euro = new App\HTML\Currency('GBP');
-            $euro->showExchangeRate();
-            $euro = new App\HTML\Currency('JPY');
-            $euro->showExchangeRate();
-            $euro->stockRate();                        
+            <?php
+            $btc = new App\HTML\CryptoHeader('BTC');
+            $btc->showExchangeRate('EUR', 'USD', 'JPY', 'GBP');
             ?>
         </ul>
         <section class="mainFrame">            

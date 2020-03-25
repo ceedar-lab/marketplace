@@ -43,8 +43,7 @@ class Router {
      * @return string
      */
     public function url(string $name, ?array $params = []): string {
-        return $this->router->generate($name, $params);
-        
+        return $this->router->generate($name, $params);        
     }
     
     /**

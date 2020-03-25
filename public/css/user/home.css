@@ -1,0 +1,82 @@
+@import 'default.css';
+
+/**
+ * ARTICLE_STYLE : Style des articles
+ */
+article[class*='__frame'] {
+    margin-bottom: 1.3rem;
+}
+
+/*
+ * Les parties communes des articles
+ */
+.profil__frame_content li, .conversion__frame_content li{
+    margin: 0.1rem auto 0;    
+	font-size: 1.3rem;
+}
+.profil__frame_content ul:last-child, .conversion__frame_content div ul:last-child {
+    flex-grow: 1;
+    text-align: end;
+    font-weight: bold;
+}
+
+/**
+ * PROFIL_STYLE : Style de l'article PROFIL
+ */
+.profil__frame {
+    display: flex;
+    padding-bottom: 0.6rem !IMPORTANT;
+    align-items: center;
+}
+.profil__frame h2 {
+    color: var(--orange);
+    margin-bottom: 0.2rem;
+}
+.profil__frame img {
+    width: 7rem;
+    height: auto;
+    margin-right: 1rem;
+}
+.profil__frame div {
+    flex-grow: 1;
+}
+.profil__frame_content {
+    display: flex;
+}
+.profil__frame_content ul:last-child li:nth-child(3){
+    color: red;
+}
+.profil__frame_content ul:last-child li:nth-child(4){
+    color: green;
+}
+
+/**
+ * CONVERSION_STYLE : Style de l'article TAUX DE CHANGE
+ */
+.conversion__frame_content h2 {
+    margin-bottom: 0.1rem;
+}
+.conversion__frame_content div {
+    display: flex;
+}
+.conversion__frame_content .-flag {
+    position: relative;
+    top: 0.1rem;
+    width: 1.7rem;
+    height: auto;
+}
+.conversion__frame_content img {
+    position: relative;
+    top: -0.2rem;
+    left: -0.4rem;
+    width: 103%;
+}
+.-increase {
+    color: green;
+}
+.-decrease {
+    color: red;
+}
+.-equal {
+    color: black;
+}

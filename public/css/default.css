@@ -16,6 +16,9 @@ html {
 li {
 	list-style-type: none;
 }
+strong {
+	color: var(--orange);
+}
 :root {
 	--dark-grey: #424242;
 	--deep-grey: #757575;
@@ -60,7 +63,7 @@ li {
 	padding-right: 3rem;
 }
 .mainFrame__navBloc a:hover {
-	color: #FFF;
+	color: var(--orange);
 }
 /**
  * MAIN_FRAME_LAYOUTS - Tree_Bar_Style : Mise en page de l'arborescence
@@ -77,14 +80,14 @@ li {
 	position: relative;
 }
 .mainFrame__treeBloc img {
-	height: 2.5rem;
+	height: 2.3rem;
 	width: auto;
 	margin: 0.5rem;
 }
 .mainFrame__treeBloc img:last-child {
 	position: absolute;
 	right: 0.5rem;
-	top: -0.3rem;
+	top: -0.2rem;
 }
 .mainFrame__treeBloc p {
 	color: var(--orange);
@@ -109,6 +112,7 @@ div[class*="frame_title"] {
 	text-transform: uppercase;
 	background-color: var(--light-grey);
 	border: 0.1rem solid var(--calm-grey);
+	margin-bottom: 1rem;
 }
 div[class*="frame_title"] img {
 	width: 2.4rem;
@@ -137,4 +141,12 @@ footer p {
 	font-family: arial;
 	font-size: 1.2rem;
 	color: var(--dark-grey);
+}
+.-alert {
+	background-color: #FFCDD2;
+	border: 0.1rem solid  #D1C4E9;
+	color: saddlebrown;
+	font-weight: bold;
+	padding: 2.2rem 1.7rem;
+	margin-bottom: 1.3rem	
 }
