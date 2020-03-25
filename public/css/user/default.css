@@ -1,28 +1,36 @@
 @import '../default.css';
 
+/**
+ * CE CSS CONTIENT LA MISE EN PAGE DE TOUTES LES PAGES TYPE "USER"
+ *
+ * GENERAL_CONFIG : Paramètres généraux
+ */
 .container {
 	width: 97%;	
 	margin: auto;
 }
+
+/**
+ * HEADER_LAYOUT : Disposition des élements du header
+ */
 header img {
 	width: 50rem;
 	position: relative;
 	left: 0rem;
 }
-.header__profil {
-	position: relative;
-	top: -1.1rem;
-}
-/**
- * ARTICLE_LAYOUT : Mise en page globale des différents blocs d'articles du site
- */
- .header {
+.header {
 	display: flex;
 	justify-content: space-between;
 }
 .header__profil {
+	position: relative;
+	top: -1.1rem;
+}
+.header__profil {
 	display: flex;
 	align-items: center;
+	position: relative;
+	top: -1.1rem;
 	margin-right: 3rem;
 }
 .header__profil img {
@@ -30,17 +38,21 @@ header img {
 	height: 6rem;
 	margin-right: 1rem;
 }
-
-
-.exchangeRates, .mainFrame {
-	position: relative !IMPORTANT;
-	top: -2.2rem !IMPORTANT;
-}
+/**
+ * API_LAYOUT : Disposition des élements de l'API
+ */
 .exchangeRates {
 	display: flex;
 	justify-content: flex-end;
 	color: var(--light-grey);
 	z-index: 5;
+}
+.exchangeRates img {
+	position: relative;
+	padding-right: 0.1rem;
+	top: 0.3rem;
+	width: 1.5rem;
+	height: auto;
 }
 .exchangeRates li {
 	background-color: var(--dark-grey);
@@ -50,23 +62,43 @@ header img {
 }
 .exchangeRates li:first-child {	
 	border-top-left-radius: 1rem;
-	padding-left: 0.5rem;
+	padding-left: 0.8rem;
 }
 .exchangeRates li:last-child {
 	border-top-right-radius: 1rem;
-	padding-right: 0.5rem;
+	padding-right: 0.8rem;
 }
-.exchangeRates img {
-	position: relative;
-	padding-right: 0.1rem;
-	top: 0.3rem;
-	width: 1.5rem;
-	height: auto;
+.exchangeRates, .mainFrame {
+	position: relative !IMPORTANT;
+	top: -2.2rem !IMPORTANT;
 }
 
+/**
+ * BODY_STYLE : Contrôle le style du corps de la page
+ */
 .mainFrame__navBloc {
 	border-top-right-radius: 0rem !IMPORTANT;
 }
+.mainContent {
+	display: flex;
+	width: 98.6%;
+	margin: auto;
+	padding-top: 0.7rem;
+}
+.mainContent__westSide {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 20%;
+	flex-grow: 0;
+	margin-right: 1.3rem;
+}
+.mainContent__eastSide {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 70%;
+	flex-grow: 0.97;
+}
+
 
 
 
