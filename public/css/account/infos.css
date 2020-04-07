@@ -1,0 +1,50 @@
+@import 'default.css';
+
+/**
+ * ARTICLE_STYLE : Style des articles
+ */
+article[class*='__frame'] {
+    margin-bottom: 1.3rem;
+}
+
+/*
+ * Disposition des champs du formulaire
+ */
+.mainContent__eastSide article {
+    position: relative;
+    left: -4rem;
+    width: 75%;
+    margin: auto;
+}
+
+.infos__frame_content p {
+    margin-top: 1.5rem;
+}
+.infos__frame_content h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.infos__frame_content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label {
+    text-align: left;
+    margin-left: 3.5rem;
+    width: 25%;
+}
+input {
+    text-align: left;
+    margin-left: 2rem;
+    width: 50%;
+}
+select {
+    text-align: left;
+    margin-left: 2rem;
+    width: 30%;
+}
+input[type~=submit] {
+    margin: 2rem auto;
+}

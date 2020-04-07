@@ -1,11 +1,19 @@
 <?php
-require '../vendor/autoload.php';
 
-/* $router = new App\Router(dirname(__DIR__) . '/src/view/access');
-$router->get('/login', 'login.php', 'login');
-$router->get('/register', 'register.php', 'register');
-$router->run(); */
+use Core\Dispatcher;
 
-$router2 = new App\Router(dirname(__DIR__) . '/src/view/user');
-$router2->get('/home', 'home.php', 'home');
-$router2->run();
+define('PUBLIQ', dirname(__FILE__));
+define('ROOT', dirname(__FILE__, 2));
+define('DS', DIRECTORY_SEPARATOR);
+define('MODEL', ROOT.DS.'app'.DS.'Model');
+define('VIEW', ROOT.DS.'app'.DS.'View');
+define('CONTROLLER', ROOT.DS.'app'.DS.'Controller');
+define('CORE', ROOT.DS.'core');
+define('CSS', DS.'css');
+define('IMAGES', DS.'images');
+define('JS', DS.'js');
+define('AUTOLOAD', ROOT.DS.'vendor'.DS.'autoload.php');
+
+require AUTOLOAD;
+
+new Dispatcher();

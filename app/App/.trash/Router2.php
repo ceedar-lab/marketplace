@@ -57,7 +57,8 @@ class Router {
         ob_start();
         require $this->viewPath . DIRECTORY_SEPARATOR . $view;
         $bodyContent = ob_get_clean();
-        require $this->viewPath . DIRECTORY_SEPARATOR . 'default.php';
+        $subPath = substr($view, 0, strpos($view, '/'));
+        require $this->viewPath . DIRECTORY_SEPARATOR . $subPath . DIRECTORY_SEPARATOR . 'default.php';
         return $this;
     }
 }

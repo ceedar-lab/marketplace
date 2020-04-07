@@ -1,0 +1,56 @@
+/**
+ * CE CSS CONTIENT LA MISE EN PAGE DES ELEMENTS COMMUNS A TOUTES LES PAGES DU SITE
+ *
+ * GENERAL_CONFIG : Paramètres généraux
+ */
+ html {
+	font-size: 62.5%;
+	background-color: var(--light-grey);
+}
+* {
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0;		
+	font-family: arial;
+}
+li {
+	list-style-type: none;
+}
+strong {
+	color: var(--orange);
+}
+:root {
+	--dark-grey: #424242;
+	--deep-grey: #757575;
+	--medium-grey: #9E9E9E;
+	--calm-grey: #BDBDBD;
+	--light-grey: #EEE;
+	--orange: #F57C00;
+}
+
+/**
+ * MAIN_FRAME_LAYOUTS - Mise en page de la section principale
+ */
+.container {
+width: 95%;
+margin: auto;
+}
+img {
+width: 70%;
+}
+h1 {
+font-size: 7rem;
+font-variant: small-caps;
+text-transform: capitalize;
+color: var(--orange);
+margin-top: 5rem;
+}
+h2 {
+font-size: 4rem;
+color: var(--dar-grey);
+margin-top: 0.2rem;
+margin-bottom: 1.5rem;
+}
+a:visited {
+    color: black;
+}

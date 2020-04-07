@@ -1,6 +1,8 @@
 <?php
+namespace App\API;
+
 /*
-CoinConversion
+CryptoCompare
  
 Utilise l'API du site https://min-api.cryptocompare.com/
 
@@ -13,10 +15,7 @@ Devises supportées :                                Cryptos supportées :
   x Dollar Canadien : 'CAD'
   x Franc Suisse : 'CHF'
 */
-
-namespace App;
-
-class CoinConversion {
+class CryptoCompare {
         
     /**
      * string / Crypto qu'on va convertir
@@ -41,7 +40,7 @@ class CoinConversion {
      *
      * @param string $coin / La crypto qu'on va convertir
      */
-    public function __construct(string $coin) {
+    public function __construct(string $coin=null) {
         $this->coin = $coin;
     }
            
@@ -50,7 +49,7 @@ class CoinConversion {
      *
      * @return string
      */
-    public function init(): string {
+    public function init() {
         // Archivage du taux actuel avant son remplacement par un taux plus récent. Servira à déterminer si le taux grimpe ou diminue
         copy(dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'data/rates.json', dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'data/last_rates.json');
        
