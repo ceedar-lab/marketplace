@@ -2,11 +2,12 @@
     "name": "ceedar-lab/niakmarket",
     "description": "",
     "require": {
-        "altorouter/altorouter": "^2.0"
+        "fzaninotto/faker": "^1.9"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/model/"
+            "App\\": "app/",
+            "Core\\" : "core/"
         }
     },
     "require-dev": {

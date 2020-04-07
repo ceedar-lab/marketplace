@@ -1,19 +1,18 @@
 <?php
-/**
- * Construit l'affichage du taux de change crypto/devise au dessus de la nav barre 
- */
+namespace App\API;
+use App\API\CryptoCompare;
 
-namespace App\HTML;
-use App\CoinConversion;
-
-class CryptoHeader {
+/*
+Construit l'affichage du taux de change crypto/devise au dessus de la nav barre
+*/
+class CreateHeader {
     
     /**
      * L'abréviation de la crypto qui sert de référence
      */
     protected $coin;    
     /**
-     * Passerelle vers CoinConversion
+     * Passerelle vers CryptoCompare
      */
     protected $bridge;
     
@@ -24,7 +23,7 @@ class CryptoHeader {
      */
     public function __construct(string $coin) {
         $this->coin = $coin;
-        $this->bridge = new CoinConversion($coin);
+        $this->bridge = new CryptoCompare($coin);
     }
     
     /**
@@ -42,15 +41,15 @@ class CryptoHeader {
             echo '<li>';
             switch ($evol[$k]) {
                 case -1:
-                    echo '<img src="images\icon_arr_decrease.png" alt="red arrow">';
+                    echo '<img src="'.IMAGES.DS.'icon_arr_decrease.png" alt="red arrow">';
                     break;
                 case 1:
-                    echo '<img src="images\icon_arr_increase.png" alt="green arrow">';
+                    echo '<img src="'.IMAGES.DS.'icon_arr_increase.png" alt="green arrow">';
                     break;
                 default:
-                    echo '<img src="images\icon_arr_equal.png" alt="grey arrow">';
+                    echo '<img src="'.IMAGES.DS.'icon_arr_equal.png" alt="grey arrow">';
             }
-            echo $k . ' ' . $data[$k] . '</li>';
+            echo $k.' '.$data[$k].'</li>';
         }
     }
 }

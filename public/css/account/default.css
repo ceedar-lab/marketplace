@@ -38,6 +38,12 @@ header img {
 	height: 6rem;
 	margin-right: 1rem;
 }
+.header__profil a {
+	color: var(--orange);
+	text-decoration: none;
+	font-weight: bold;
+}
+
 /**
  * API_LAYOUT : Disposition des élements de l'API
  */

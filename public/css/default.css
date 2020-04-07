@@ -98,6 +98,10 @@ strong {
 /**
  * ARTICLE_LAYOUT : Mise en page globale des différents blocs d'articles du site
  */
+form div {
+	text-align: center;
+}
+
 article[class*=__frame] {
 	padding: 0.7rem 0.8rem 1.3rem;
 	border: 0.1rem solid var(--calm-grey);
@@ -123,15 +127,16 @@ div[class*="frame_title"] img {
 /**
  * OTHERS : Config des "briques" du site 
  */
-form input {
+input, select {
 	margin: 1rem auto;
 	height: 3.2rem;
 }
-form input[type='submit'] {
+input[type='submit'] {
 	background-color: var(--orange);
 	height: 4rem;
-	width: 12rem;
-    font-size: 1.6rem;
+	width: 12rem !IMPORTANT;
+	text-align: center;
+	font-size: 1.6rem;
 	color: #FFF;
 	border: none;
 	border-radius: 0.5rem;
