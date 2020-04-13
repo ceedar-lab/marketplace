@@ -14,6 +14,8 @@ define('IMAGES', DS.'images');
 define('JS', DS.'js');
 define('AUTOLOAD', ROOT.DS.'vendor'.DS.'autoload.php');
 
+
+
 require AUTOLOAD;
 
 new Dispatcher();

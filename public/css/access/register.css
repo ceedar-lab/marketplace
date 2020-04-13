@@ -1,10 +1,9 @@
-@import '../default.css';
-@import 'login.css';
+@import 'default.css';
 
 #passwordValue {
     display: flex;
     margin: 0 auto;
-    width: 60.6%;
+    width: 100.9%;
 }
 #passwordValue > div {
     position: relative;
@@ -19,14 +18,18 @@
     
 }
 #xx-low {
-    border-left: 0.1rem solid var(--medium-grey) !IMPORTANT;
+    border-left: 0.1rem solid var(--medium-grey) !important;
 }
 #xx-high {
-    border-right: 0.1rem solid var(--medium-grey) !IMPORTANT;
+    border-right: 0.1rem solid var(--medium-grey) !important;
 }
-/*.-password {
-    top: -0.7rem;
-}
+.-error {
+    position: relative;
+    top: -0.5rem;
+    text-align: left;
+    color: red;
+    font-size: 1.3rem;
+}/* 
 .g-recaptcha {
     display: inline;
     margin: 1rem auto;

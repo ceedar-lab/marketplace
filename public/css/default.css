@@ -1,9 +1,9 @@
 /**
  * CE CSS CONTIENT LA MISE EN PAGE DES ELEMENTS COMMUNS A TOUTES LES PAGES DU SITE
  *
- * GENERAL_CONFIG : Paramètres généraux
+ * Paramètres généraux
  */
-html {
+ html {
 	font-size: 62.5%;
 	background-color: var(--light-grey);
 }
@@ -12,12 +12,6 @@ html {
 	margin: 0;
 	padding: 0;		
 	font-family: arial;
-}
-li {
-	list-style-type: none;
-}
-strong {
-	color: var(--orange);
 }
 :root {
 	--dark-grey: #424242;
@@ -29,22 +23,20 @@ strong {
 }
 
 /**
- * MAIN_FRAME_LAYOUTS - Mise en page de la section principale
+ * SECTION - Paramètres de la section principale
  */
-.mainFrame {
-	margin: auto;
+section {
+	margin: 0 auto;
 	width: 100%;
 	background-color: #FFF;
 	border-top-left-radius: 1rem;
 	border-top-right-radius: 1rem;
-	box-shadow: 0.5rem 0.5rem 1.5rem var(--medium-grey);
-	padding-bottom: 3rem;
 }
-
-/**
- * MAIN_FRAME_LAYOUTS - Nav_Bloc_Style : Mise en page de la barre de navigation
- */
-.mainFrame__navBloc {
+.b-mainSection {	
+	box-shadow: 0.5rem 0.5rem 1.5rem var(--medium-grey);
+	padding-bottom: 2rem;
+}
+.b-mainSection__nav {
 	display: flex;
 	background-color: var(--dark-grey);
 	text-transform: capitalize;
@@ -56,19 +48,20 @@ strong {
 	padding-left: 3rem;
 	align-items: center;
 }
-.mainFrame__navBloc a {	
+.b-mainSection__nav a {	
 	font-size: 1.8rem;
 	color: var(--light-grey);
 	text-decoration: none;
 	padding-right: 3rem;
 }
-.mainFrame__navBloc a:hover {
+.b-mainSection__nav a:hover {
 	color: var(--orange);
 }
+
 /**
- * MAIN_FRAME_LAYOUTS - Tree_Bar_Style : Mise en page de l'arborescence
+ * TREE - Paramètres de l'arborescence
  */
-.mainFrame__treeBloc {
+.b-tree {
 	display: flex;
 	border: 0.1rem solid var(--calm-grey);
 	width: 98%;
@@ -79,36 +72,32 @@ strong {
 	padding-left: 0.5rem;
 	position: relative;
 }
-.mainFrame__treeBloc img {
+.b-tree img {
 	height: 2.3rem;
 	width: auto;
 	margin: 0.5rem;
 }
-.mainFrame__treeBloc img:last-child {
+.b-tree img:last-child {
 	position: absolute;
 	right: 0.5rem;
 	top: -0.2rem;
 }
-.mainFrame__treeBloc p {
+.b-tree p {
 	color: var(--orange);
 	font-size: 1.3rem;
 	font-weight: bold;
 }
 
 /**
- * ARTICLE_LAYOUT : Mise en page globale des différents blocs d'articles du site
+ * ARTICLES - Paramètres des articles
  */
-form div {
-	text-align: center;
-}
-
-article[class*=__frame] {
+article {
 	padding: 0.7rem 0.8rem 1.3rem;
 	border: 0.1rem solid var(--calm-grey);
-	border-radius: 0.5rem;
+	border-radius: 0.5rem;	
+    margin-bottom: 1.3rem;
 }
-
-div[class*="frame_title"] {
+article div[class*="title"] {
 	display: flex;
 	align-items: center;
 	height: 3.5rem;
@@ -118,23 +107,39 @@ div[class*="frame_title"] {
 	border: 0.1rem solid var(--calm-grey);
 	margin-bottom: 1rem;
 }
-div[class*="frame_title"] img {
+article div[class*="title"] img {
 	width: 2.4rem;
 	height: auto;
 	margin: auto 1.3rem auto 0.8rem;
 }
 
 /**
- * OTHERS : Config des "briques" du site 
+ * ELEMENTS - Paramètres des elements individuels
  */
+a {
+	color: var(--orange);
+	text-decoration: none;
+}
+p {
+	text-align: justify;
+}
+li {
+	list-style-type: none;
+}
+strong {
+	color: var(--orange);
+}
 input, select {
 	margin: 1rem auto;
 	height: 3.2rem;
 }
+textarea {
+	margin: 1rem auto;
+}
 input[type='submit'] {
 	background-color: var(--orange);
 	height: 4rem;
-	width: 12rem !IMPORTANT;
+	width: 12rem !important;
 	text-align: center;
 	font-size: 1.6rem;
 	color: #FFF;
@@ -154,4 +159,46 @@ footer p {
 	font-weight: bold;
 	padding: 2.2rem 1.7rem;
 	margin-bottom: 1.3rem	
+}
+
+/**
+ * MODIFICATEURS
+ */
+.-column {
+	display: flex;
+	flex-direction: column;
+}
+.-row {
+	display: flex;
+	flex-direction: row;
+}
+.-small {
+	width: 30rem;
+}
+.-green {
+    color: green;
+}
+.-red {
+    color: red;
+}
+.-black {
+    color: black;
+}
+.-bold {
+	font-weight: bold;
+}
+.-w65 {
+	width: 65% !important;
+}
+.-w50 {
+	width: 50% !important;
+}
+.-w30 {
+	width: 30% !important;
+}
+.-w20 {
+	width: 20% !important;
+}
+.-hidden {
+	display: none;
 }

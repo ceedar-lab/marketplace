@@ -8,6 +8,6 @@ use Core;
 class MainController extends Core\Controller {
 
     public function home($params = null) {
-        $controller = $this->render();
+        $this->render();
     }
 } 

@@ -18,8 +18,8 @@
 		<header>
 			<img src="<?= IMAGES.DS ?>logo_market.png" alt="logo du market">
 		</header>
-		<section class="mainFrame">
-			<ul class="mainFrame__navBloc">
+		<section class="b-mainSection">
+			<ul class="b-mainSection__nav">
 				<li><a href="<?= $router->url('access', 'login'); ?>">Connexion</a></li>
 				<li><a href="<?= $router->url('access', 'register'); ?>">S'inscrire</a></li>
 				<li><a href="#">FAQ</a></li>

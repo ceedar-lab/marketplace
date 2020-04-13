@@ -3,7 +3,7 @@
 /**
  * CE CSS CONTIENT LA MISE EN PAGE DE TOUTES LES PAGES TYPE "USER"
  *
- * GENERAL_CONFIG : Paramètres généraux
+ * Paramètres généraux
  */
 .container {
 	width: 97%;	
@@ -11,20 +11,14 @@
 }
 
 /**
- * HEADER_LAYOUT : Disposition des élements du header
+ * HEADER - Paramètres du header
  */
 header img {
 	width: 50rem;
-	position: relative;
-	left: 0rem;
 }
 .header {
 	display: flex;
 	justify-content: space-between;
-}
-.header__profil {
-	position: relative;
-	top: -1.1rem;
 }
 .header__profil {
 	display: flex;
@@ -38,77 +32,62 @@ header img {
 	height: 6rem;
 	margin-right: 1rem;
 }
-.header__profil a {
-	color: var(--orange);
-	text-decoration: none;
-	font-weight: bold;
-}
 
 /**
- * API_LAYOUT : Disposition des élements de l'API
+ * API - Disposition des élements de l'API
  */
-.exchangeRates {
+ .api__header {
 	display: flex;
 	justify-content: flex-end;
 	color: var(--light-grey);
 	z-index: 5;
 }
-.exchangeRates img {
+.api__header img {
 	position: relative;
 	padding-right: 0.1rem;
 	top: 0.3rem;
 	width: 1.5rem;
 	height: auto;
 }
-.exchangeRates li {
+.api__header li {
 	background-color: var(--dark-grey);
 	border: 0.1rem solid var(--dark-grey);
 	font-size: 1.3rem;
 	padding: 0rem 0.2rem;
 }
-.exchangeRates li:first-child {	
+.api__header li:first-child {	
 	border-top-left-radius: 1rem;
 	padding-left: 0.8rem;
 }
-.exchangeRates li:last-child {
+.api__header li:last-child {
 	border-top-right-radius: 1rem;
 	padding-right: 0.8rem;
 }
-.exchangeRates, .mainFrame {
-	position: relative !IMPORTANT;
-	top: -2.2rem !IMPORTANT;
+.api__header, .b-mainSection {
+	position: relative !important;
+	top: -2.2rem !important;
 }
+
 
 /**
- * BODY_STYLE : Contrôle le style du corps de la page
+ * BODY : paramètres du corps de la page et des 2 sections latérales
  */
-.mainFrame__navBloc {
-	border-top-right-radius: 0rem !IMPORTANT;
+.b-mainSection__nav {
+	border-top-right-radius: 0rem !important;
 }
-.mainContent {
-	display: flex;
+.b-content {
+    display: flex;
 	width: 98.6%;
 	margin: auto;
-	padding-top: 0.7rem;
+    padding-top: 0.7rem;
 }
-.mainContent__westSide {
-	display: flex;
-	flex-direction: column;
+.b-content__leftSide {
 	flex-basis: 20%;
 	flex-grow: 0;
-	margin-right: 1.3rem;
+    margin-right: 1.3rem;
+    height: 100%;
 }
-.mainContent__eastSide {
-	display: flex;
-	flex-direction: column;
+.b-content__rightSide {
 	flex-basis: 70%;
-	flex-grow: 0.97;
+    flex-grow: 0.97;  
 }
-
-
-
-
-
-
-
-
