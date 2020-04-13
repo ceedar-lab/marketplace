@@ -2,6 +2,7 @@
 $router = new Core\Router;
 use App\API\CryptoCompare;
 use App\HTML\Tree;
+use App\HTML\AccountMenu;
 
 ?>
 
@@ -29,7 +30,7 @@ use App\HTML\Tree;
                 </ul>
             </div>
         </header>
-        <ul class="exchangeRates">
+        <ul class="api__header">
             <?php
             $init = new CryptoCompare();
             $init->init();
@@ -37,8 +38,8 @@ use App\HTML\Tree;
             $btc->showExchangeRate('EUR', 'USD', 'JPY', 'GBP');
             ?>
         </ul>
-        <section class="mainFrame">            
-            <ul class="mainFrame__navBloc">
+        <section class="b-mainSection">            
+            <ul class="b-mainSection__nav">
                 <li><a href="<?= $router->url('main', 'home'); ?>">Accueil</a></li>
                 <li><a href="#">Messages</a></li>
                 <li><a href="#">Achats</a></li>
@@ -50,15 +51,23 @@ use App\HTML\Tree;
 
             <?php $tree = new Tree('profil', $view); ?>
 
-            <div class="mainContent">
-                <section class="mainContent__westSide">
-                    <article class="profil__frame">			
-                        <div class="profil__frame_title">
+            <div class="b-content">
+                <section class="b-content__leftSide -column">
+                    <article class="b-articleProfil">			
+                        <div class="b-articleProfil__title">
                             <img src="<?= IMAGES.DS ?>icon_profil.png" alt='icone'>
                             <h1>Menu utilisateur</h1>				
                         </div>
-                        <div class="profil__frame_content">
-
+                        <div class="b-articleProfil__content">
+                            <ul>
+                                <?php new AccountMenu('infos', 'Infos personnelles'); ?>
+                                <?php /* new AccountMenu('orders', 'Mes commandes'); */ ?>
+                                <?php /* new AccountMenu('messages', 'Messages privés'); */ ?>
+                                <?php /* new AccountMenu('wishes', 'Ma liste d\'envies'); */ ?>
+                                <?php /* new AccountMenu('favorites', 'Vendeurs favoris'); */ ?>
+                                <?php /* new AccountMenu('feedbacks', 'Feedbacks'); */ ?>
+                                <?php /* new AccountMenu('blocked', 'Liste noire'); */ ?>
+                            </ul>
                         </div>
                     </article>
                 </section>                

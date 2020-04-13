@@ -20,18 +20,18 @@
                 <ul>
                     <li>Connecté en tant que <strong><a href="<?= $router->url('account', 'infos') ?>">UserName</a></strong></li>
                     <li>Balance</li>
-                    <li><a href="<?= $router->url('access', 'login') ?>">Déconnexion</a></li>
+                    <li><a href="<?= $router->url('access', 'login') ?>"><strong>Déconnexion</strong></a></li>
                 </ul>
             </div>
         </header>
-        <ul class="exchangeRates">
+        <ul class="api__header">
             <?php
             $btc = new App\API\CreateHeader('BTC');
             $btc->showExchangeRate('EUR', 'USD', 'JPY', 'GBP');
             ?>
         </ul>
-        <section class="mainFrame">            
-            <ul class="mainFrame__navBloc">
+        <section class="b-mainSection">            
+            <ul class="b-mainSection__nav">
                 <li><a href="<?= $router->url('main', 'home'); ?>">Accueil</a></li>
                 <li><a href="#">Messages</a></li>
                 <li><a href="#">Achats</a></li>

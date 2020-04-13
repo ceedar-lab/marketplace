@@ -1,5 +1,6 @@
 <?php
 namespace Core;
+use App\Model;
 
 /**
  * Controller général parent des App/Controller

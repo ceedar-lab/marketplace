@@ -1,50 +1,39 @@
-@import 'default.css';
-
-/**
- * ARTICLE_STYLE : Style des articles
- */
-article[class*='__frame'] {
-    margin-bottom: 1.3rem;
-}
+@import '../main/default.css';
 
 /*
- * Disposition des champs du formulaire
+ * Disposition des blocs
  */
-.mainContent__eastSide article {
+.b-content__rightSide article {
     position: relative;
     left: -4rem;
     width: 75%;
     margin: auto;
 }
-
-.infos__frame_content p {
-    margin-top: 1.5rem;
-}
-.infos__frame_content h2 {
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-}
-
-.infos__frame_content div {
+.b-articleInfos__content div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.b-articleInfos__content p {
+    margin-top: 1.5rem;
+}
+.b-articleInfos__content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+/*
+ * Paramètres des élements 
+ */
 label {
     text-align: left;
     margin-left: 3.5rem;
     width: 25%;
 }
-input {
+input, select, textarea {
     text-align: left;
     margin-left: 2rem;
-    width: 50%;
 }
-select {
-    text-align: left;
-    margin-left: 2rem;
-    width: 30%;
-}
-input[type~=submit] {
+input[type=submit] {
     margin: 2rem auto;
 }

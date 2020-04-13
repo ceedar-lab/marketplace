@@ -64,14 +64,14 @@ class CreateArticle {
         // La valeur de la devise
         foreach($arg as $key) {
             if ($evol[$key] == 1) {
-                echo '<li class="-increase">'.$data[$key].'</li>';
+                echo '<li class="-green">'.$data[$key].'</li>';
             } elseif ($evol[$key] == -1) {
-                echo '<li class="-decrease">'.$data[$key].'</li>';
+                echo '<li class="-red">'.$data[$key].'</li>';
             } else {
-                echo '<li class="-equal">'.$data[$key].'</li>';
+                echo '<li class="-black">'.$data[$key].'</li>';
             }
         }       
         echo '</ul></div>';
-        echo '<img src="<?= IMAGES ?>icon_separator_horizontal.png" alt"separateur">';
+        echo '<img class="-small" src="'.IMAGES.DS.'icon_separator_horizontal.png" alt"separateur">';
     }
 }

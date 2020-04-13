@@ -1,82 +1,124 @@
 @import 'default.css';
 
-/**
- * ARTICLE_STYLE : Style des articles
- */
-article[class*='__frame'] {
-    margin-bottom: 1.3rem;
-}
-
 /*
  * Les parties communes des articles
  */
-.profil__frame_content li, .conversion__frame_content li{
-    margin: 0.1rem auto 0;    
-	font-size: 1.3rem;
-}
-.profil__frame_content ul:last-child, .conversion__frame_content div ul:last-child {
+.b-articleProfil ul:last-child, .b-articleConversion div ul:last-child {
     flex-grow: 1;
     text-align: end;
     font-weight: bold;
 }
+.b-articleProfil__content li, .b-articleConversion__content li {
+    margin: 0.1rem auto 0;    
+	font-size: 1.3rem;
+}
 
 /**
- * PROFIL_STYLE : Style de l'article PROFIL
+ * ARTICLE PROFIL - Style de l'article
  */
-.profil__frame {
+.b-articleProfil {
     display: flex;
-    padding-bottom: 0.6rem !IMPORTANT;
+    padding-bottom: 0.6rem !important;
     align-items: center;
 }
-.profil__frame h2 {
-    color: var(--orange);
-    margin-bottom: 0.2rem;
+.b-articleProfil__content {
+    margin-top: 0.2rem;
+    display: flex;
 }
-.profil__frame img {
+.b-articleProfil img {
     width: 7rem;
     height: auto;
     margin-right: 1rem;
 }
-.profil__frame div {
+.b-articleProfil div {
     flex-grow: 1;
-}
-.profil__frame_content {
-    display: flex;
-}
-.profil__frame_content ul:last-child li:nth-child(3){
-    color: red;
-}
-.profil__frame_content ul:last-child li:nth-child(4){
-    color: green;
 }
 
 /**
- * CONVERSION_STYLE : Style de l'article TAUX DE CHANGE
+ * ARTICLE CONVERSION - Style de l'article
  */
-.conversion__frame_content h2 {
+.b-articleConversion__content h2 {
     margin-bottom: 0.1rem;
 }
-.conversion__frame_content div {
+.b-articleConversion__content div {
     display: flex;
 }
-.conversion__frame_content .-flag {
+.b-articleConversion__content .-flag {
     position: relative;
     top: 0.1rem;
     width: 1.7rem;
     height: auto;
 }
-.conversion__frame_content img {
+.b-articleConversion__content img {
     position: relative;
     top: -0.2rem;
     left: -0.4rem;
     width: 103%;
 }
-.-increase {
-    color: green;
+
+/**
+ * ARTICLE OBJETS EN VEDETTE - Style de l'article
+ */
+.b-articleFeatured__content:last-child {
+    margin-top: 2rem;
 }
-.-decrease {
-    color: red;
+.b-articleFeatured__content ul {
+    justify-content: space-evenly;
+    align-items: center;
 }
-.-equal {
+.b-articleFeatured__content li {
+    width: 20rem;
+}
+.b-articleFeatured__content li a {
+    font-family: Bahnschrift, 'Century Gothic', Arial;
+    font-size: 2.1rem;
     color: black;
+}
+.b-articleFeatured__content li a:hover {
+    color: var(--orange);
+}
+.b-articleFeatured__e-item {
+    width: 100% !important;
+}
+
+/**
+ * ARTICLE OBJETS EN VEDETTE - Style de l'article
+ */
+ .optGroup {
+    display: none;
+}
+.b-articleCategory__content input:checked + label + ul {
+    display: flex;
+    flex-direction: column;
+}
+.b-articleCategory__content input:checked + label > img {
+    transform: rotate(180deg);
+    position: relative;
+    top: 0.3rem;
+}
+.b-articleCategory__content img {
+    float: right;
+    padding-top: 0.3rem;
+    padding-right: 0.5rem;
+    width: 1.3rem;
+    height: 1.2rem;
+}
+.-separator {
+    width: 100% !important;
+    height: auto !important;
+}
+.optChild a {
+    color: black;
+    padding-left: 1.5rem;
+    font-weight: normal;
+}
+.b-articleCategory__content li {
+    margin-top: 0.2rem;
+}
+label {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 0.3rem;
+    padding-left: 0.5rem;
 }
